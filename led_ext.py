@@ -3,8 +3,10 @@ import machine
 import utime
 
 led_ext = machine.Pin(15, machine.Pin.OUT)
-pause = 100000
+
+pause = 1
+
 while True:
-    led_ext.value(not led_ext())
-    utime.sleep_us(pause)
+    led_ext.toggle()
+    utime.sleep(pause)
     
